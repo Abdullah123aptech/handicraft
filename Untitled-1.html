@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hammad shapater</title>
+     
+<style>
+h1{
+    font-weight: bold;
+    text-decoration: double underline;
+    color: darkorchid;
+    text-align: center;
+}
+
+label{
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.container{
+    margin: 50px auto;
+    border: 2px green solid;
+    width: 400px;
+    height: auto;
+    padding: 10px;
+}
+
+#btn{
+    width: 80px;
+    height: 50px;
+    background-color: indigo;
+    font-size: large;
+    font-weight: bold;
+}
+
+input{
+    margin: 20px,20px,0px,20px;
+    width: 355px;
+    height: 30px;
+    border-radius: 30px;
+    box-align: center;
+}
+
+span{
+    color: red;
+    font-weight: bold;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+     <h1>Yousuf's Form </h1>
+     <form onsubmit="return validation()">
+    
+    <label >Username : </label><br>
+    <input type="text"  id="user"><br><br>
+    <span id="username"></span><br>
+
+    <label >Password : </label><br>
+    <input type="text"  id="pass"><br><br>
+    <span id="pwd"></span><br>
+
+    <label >Confirm Password : </label><br>
+    <input type="text"  id="cpass"><br><br>
+    <span id="cpwd"></span><br>
+
+    <label >Mobile Number : </label><br>
+    <input type="number"  id="mob"><br><br>
+    <span id="phne"></span><br>
+
+    <label >Email : </label><br>
+    <input type="email"  id="mail"><br><br>
+    <span id="email"></span><br>
+    
+    <input  id="btn" type="submit"><br>
+    
+    </form>
+    </div>
+    <script>
+function validation(){
+    var user= document.getElementById("user").value
+    var pass= document.getElementById("pass").value 
+    var cpass =document.getElementById("cpass").value
+    var mob= document.getElementById("mob").value
+    var mail= document.getElementById("mail").value
+// USERNAME VALIDATION
+if (user ==
++
+""){
+document.getElementById("username").innerHTML="**Please fill in the Username feild"
+return false
+}
+else{
+document.getElementById("username").innerHTML=null
+}
+if (user.length<3 || user.length>20){
+document.getElementById("username").innerHTML="**Characters must be betwen 3 to 20"
+return false
+}else{
+document.getElementById("username").innerHTML=null
+}
+if(!isNaN(user)){
+document.getElementById("username").innerHTML="Digits are not allowed"
+return false
+}else{
+document.getElementById("username").innerHTML=null
+    </script>
+
+
+</body>
+</html>
